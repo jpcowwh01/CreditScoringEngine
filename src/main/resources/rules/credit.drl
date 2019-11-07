@@ -1,0 +1,25 @@
+import com.cowherd.demo.creditrus.CreditApplicant;
+import com.cowherd.demo.creditrus.CreditResult;
+
+dialect "mvel"
+
+/*
+ *  Some demo rules to show off the decoupling of business logic from
+ *  infrastructure.
+ *
+ */
+
+
+rule "Credit Evaluation on education"
+    when
+        CreditApplicant(collegeDegree == true)
+    then
+        insert(CreditResult.Approved);
+end
+
+rule "Credit Evaluation on Age under 20"
+    when
+        CreditApplicant(age < 20, collegeDegree == false)
+    then
+        insert(CreditResult.Declined);
+end
