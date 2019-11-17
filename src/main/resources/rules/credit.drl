@@ -12,7 +12,7 @@ dialect "mvel"
 
 rule "Credit Evaluation on education"
     when
-        CreditApplicant(collegeDegree == true)
+        CreditApplicant(collegeDegree == true || age > 45)
     then
         insert(CreditResult.Approved);
 end

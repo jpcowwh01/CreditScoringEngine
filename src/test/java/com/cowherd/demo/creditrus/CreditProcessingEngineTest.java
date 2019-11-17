@@ -11,8 +11,8 @@ public class CreditProcessingEngineTest {
         CreditProcessingEngine creditProcessingEngine = new CreditProcessingEngine();
         creditApplicant.setName("John Q. Public");
         creditApplicant.setAddress("4555 Lake Forest Dr.  Cinci, OH  45242");
-        creditApplicant.setAge(44);
-        creditApplicant.setCollegeDegree(true);
+        creditApplicant.setAge(46);
+        creditApplicant.setCollegeDegree(false);
         creditApplicant.setDeclaredBankruptcy(false);
         creditApplicant.setEmployed(true);  // for now
         creditApplicant.setOwnHome(true);
